@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- A CardView that contains Today's weather -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        card_view:cardElevation="10dp"
+        card_view:cardPreventCornerOverlap="false"
+        android:layout_marginBottom="10dp"
+        android:layout_height="230dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/date_today"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:text="Today, August 11"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_today"
+                android:layout_width="120dp"
+                android:layout_height="250dp"
+                android:src="@drawable/ic_sunny_foreground"
+                android:layout_below="@id/date_today"
+                android:layout_marginLeft="35dp"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/degree1_today"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_below="@id/date_today"
+                android:textColor="@color/degree1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="55dp"
+                android:textSize="60sp"
+                android:text="31°"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="180dp">
+
+            <TextView
+                android:id="@+id/status_today"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="Clear"
+                android:textSize="20sp"
+                android:layout_below="@id/image_today"
+                android:layout_marginLeft="70dp"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/degree2_today"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_below="@id/degree1_today"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="95dp"
+                android:textSize="20sp"
+                android:text="12°"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ListView
+        android:id="@+id/list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+</LinearLayout>
+
+
+
+
